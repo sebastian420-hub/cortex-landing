@@ -10,13 +10,13 @@ interface TechItem {
 }
 
 const techStack: TechItem[] = [
-  { name: 'Python', version: '3.11+', icon: '🐍' },
+  { name: 'Python', version: '3.10+', icon: '🐍' },
+  { name: 'Rust', version: 'Native', icon: '🦀' },
+  { name: 'Go', version: 'Services', icon: '🐹' },
+  { name: 'ChromaDB', version: 'Local', icon: '💾' },
   { name: 'React', version: '18+', icon: '⚛️' },
-  { name: 'FastAPI', version: '0.100+', icon: '⚡' },
-  { name: 'PostgreSQL', version: '15+', icon: '🐘' },
   { name: 'Docker', version: '24+', icon: '🐳' },
   { name: 'Kubernetes', version: '1.28+', icon: '☸️' },
-  { name: 'Redis', version: '7+', icon: '🟦' },
   { name: 'OpenRouter', version: 'API', icon: '🌐' },
 ];
 

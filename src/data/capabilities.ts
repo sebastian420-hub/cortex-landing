@@ -43,11 +43,11 @@ export const capabilities: Capability[] = [
     command: 'cortex migrate --from=legacy --to=modern',
   },
   {
-    icon: '⚙️',
-    title: 'Config',
-    subtitle: 'Management',
-    description: 'Centralized configuration management',
-    command: 'cortex config --set env=prod --services=api,web',
+    icon: '🧠',
+    title: 'Memory',
+    subtitle: 'Semantic',
+    description: 'Persistent project-wide knowledge using local ChromaDB',
+    command: 'cortex memory --query "How does the auth work?"',
   },
   {
     icon: '🧪',
@@ -57,10 +57,10 @@ export const capabilities: Capability[] = [
     command: 'cortex test --type=integration --coverage=95',
   },
   {
-    icon: '📜',
-    title: 'Audit',
-    subtitle: '& Report',
-    description: 'Compliance and performance reporting',
-    command: 'cortex report --type=security --format=pdf',
+    icon: '🛡️',
+    title: 'Safety',
+    subtitle: 'Transactional',
+    description: 'Atomic file operations with full rollback and commit capability',
+    command: 'cortex commit "Refactor API structure"',
   },
 ];

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: 'Cortex - Autonomous Terminal Agent',
     description: 'Execute end-to-end operations autonomously. Local-first. Cloud-optional.',
     type: 'website',
-    url: 'https://github.com/sebastian420-hub/local_terminal_agent',
+    url: 'https://github.com/sebastian420-hub/cortex',
   },
   twitter: {
     card: 'summary_large_image',

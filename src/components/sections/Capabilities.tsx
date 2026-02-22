@@ -29,7 +29,7 @@ export default function Capabilities() {
         {/* Additional Info */}
         <div className="text-center mt-12">
           <p className="text-sm text-textDim">
-            Each capability uses a specialized model with delegated tools for maximum accuracy.
+            Powered by Cortex v1.1.0 with Semantic Memory, Transactional Safety, and Hybrid Native Performance.
           </p>
         </div>
       </Container>

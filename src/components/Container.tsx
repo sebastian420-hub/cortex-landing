@@ -1,14 +1,12 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 interface ContainerProps {
   children: ReactNode;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: React.ElementType;
 }
 
-export default function Container({ children, className = '', as = 'div' }: ContainerProps) {
-  const As = as as any;
-  
+export default function Container({ children, className = '', as: As = 'div' }: ContainerProps) {
   return (
     <As className={`container mx-auto px-6 ${className}`}>
       {children}

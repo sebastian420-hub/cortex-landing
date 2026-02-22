@@ -8,47 +8,48 @@ import Container from '../Container';
 // Terminal content workflows
 const workflows = {
   deploy: {
-    title: 'Production Deployment',
-    command: 'cortex deploy --env=prod --services=api,web',
+    title: 'Safe Deployment',
+    command: 'cortex deploy --env=prod --services=api',
     steps: [
       { text: 'Analyzing infrastructure...', delay: 800 },
-      { text: 'Building container images...', delay: 600 },
+      { text: 'Transaction Started: creating file snapshots...', delay: 600 },
+      { text: 'Building container images...', delay: 700 },
       { text: 'Deploying to production...', delay: 1000 },
       { text: 'Running smoke tests...', delay: 800 },
-      { text: '✅ Complete. All services healthy.', delay: 400, success: true },
+      { text: '✅ Commit complete. All services healthy.', delay: 400, success: true },
+    ],
+  },
+  memory: {
+    title: 'Semantic Context Recall',
+    command: 'cortex memory --query "Explain the auth flow"',
+    steps: [
+      { text: 'Indexing codebase with Tree-sitter...', delay: 600 },
+      { text: 'Querying project-wide vector database...', delay: 700 },
+      { text: 'Found context in PR #42: Race condition fix...', delay: 900 },
+      { text: 'Found context in auth.py: JWT middleware logic...', delay: 800 },
+      { text: '✅ Explanation generated from project context.', delay: 400, success: true },
     ],
   },
   debug: {
-    title: 'Debug Session',
-    command: 'cortex debug --service=api --logs=recent',
+    title: 'Autonomous Debugging',
+    command: 'cortex debug --service=api',
     steps: [
-      { text: 'Reading logs from api service...', delay: 600 },
-      { text: 'Tracing request path...', delay: 700 },
-      { text: 'Identifying race condition in auth...', delay: 900 },
-      { text: 'Applying mutex lock...', delay: 800 },
-      { text: '✅ Fix applied. Tests passing.', delay: 400, success: true },
-    ],
-  },
-  migrate: {
-    title: 'System Migration',
-    command: 'cortex migrate --from=legacy --to=modern',
-    steps: [
-      { text: 'Mapping data schemas...', delay: 700 },
-      { text: 'Validating data integrity...', delay: 800 },
-      { text: 'Executing migration plan...', delay: 1200 },
-      { text: 'Running validation tests...', delay: 900 },
-      { text: '✅ Migration complete. 0 data loss.', delay: 400, success: true },
+      { text: 'Reading logs: detected deadlock at auth.py:124', delay: 600 },
+      { text: 'Semantic Recall: Found similar issue in sessions #7', delay: 700 },
+      { text: 'Applying transactional fix with rollback safety...', delay: 900 },
+      { text: 'Running verification tests: 147 passed', delay: 800 },
+      { text: '✅ Root cause fixed. Solution learned.', delay: 400, success: true },
     ],
   },
   secure: {
-    title: 'Security Audit',
-    command: 'cortex audit --service=all --severity=high',
+    title: 'Performance-First Audit',
+    command: 'cortex audit --service=all',
     steps: [
-      { text: 'Scanning for vulnerabilities...', delay: 600 },
-      { text: 'Analyzing dependencies...', delay: 800 },
-      { text: 'Checking configuration...', delay: 700 },
-      { text: 'Reviewing access patterns...', delay: 900 },
-      { text: '✅ All systems secure. 0 issues found.', delay: 400, success: true },
+      { text: 'Offloading AST parsing to Rust extensions...', delay: 600 },
+      { text: 'Scanning for vulnerabilities (2.4k files/s)...', delay: 800 },
+      { text: 'Analyzing dependencies with Go services...', delay: 700 },
+      { text: 'Generating comprehensive security report...', delay: 900 },
+      { text: '✅ 0 high-severity issues found. 100% secure.', delay: 400, success: true },
     ],
   },
 };
@@ -81,7 +82,7 @@ export default function Hero() {
     setVisibleSteps([]);
     const currentWorkflowSteps = workflows[currentWorkflow].steps;
     
-    let timeoutIds: NodeJS.Timeout[] = [];
+    const timeoutIds: NodeJS.Timeout[] = [];
     let totalDelay = 0;
 
     currentWorkflowSteps.forEach((step, index) => {
@@ -149,7 +150,7 @@ export default function Hero() {
               View Demo →
             </motion.a>
             <motion.a
-              href="https://github.com/sebastian420-hub/local_terminal_agent"
+              href="https://github.com/sebastian420-hub/cortex"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}

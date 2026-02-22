@@ -5,8 +5,8 @@ import { useState, useEffect } from 'react';
 
 const navLinks = [
   { name: 'Features', href: '#features' },
-  { name: 'Docs', href: 'https://github.com/sebastian420-hub/local_terminal_agent' },
-  { name: 'GitHub', href: 'https://github.com/sebastian420-hub/local_terminal_agent' },
+  { name: 'Docs', href: 'https://github.com/sebastian420-hub/cortex/tree/main/docs' },
+  { name: 'GitHub', href: 'https://github.com/sebastian420-hub/cortex' },
 ];
 
 export default function Header() {

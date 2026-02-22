@@ -4,8 +4,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const links = [
-    { name: 'GitHub', href: 'https://github.com/cortex-ai/cortex' },
-    { name: 'Documentation', href: 'https://github.com/cortex-ai/cortex/wiki' },
+    { name: 'GitHub', href: 'https://github.com/sebastian420-hub/cortex' },
+    { name: 'Documentation', href: 'https://github.com/sebastian420-hub/cortex/tree/main/docs' },
     { name: 'Discord', href: 'https://discord.gg/cortex' },
   ];
 

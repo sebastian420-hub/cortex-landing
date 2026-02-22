@@ -106,7 +106,7 @@ export default function CommandReference() {
             Pro tip: Click any command to copy it to your clipboard.
           </p>
           <a
-            href="https://github.com/sebastian420-hub/local_terminal_agent"
+            href="https://github.com/sebastian420-hub/cortex"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-6 py-3 bg-transparent text-text border border-border font-medium rounded-lg hover:bg-bg hover:text-text transition-all duration-200"
